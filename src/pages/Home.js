@@ -15,13 +15,37 @@ const Home = () => {
     dispatch(loadGames());
   }, [dispatch]);
 
-  const { popular, upcoming, NewGames } = useSelector((state) => state.games);
+  const { popular, upcoming, newGames } = useSelector((state) => state.games);
 
   return (
     <GameList>
       <h2>Upcoming games</h2>
       <Games>
         {upcoming.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            image={game.background_image}
+            id={game.id}
+            key={game.id}
+          />
+        ))}
+      </Games>
+      <h2>Popular games</h2>
+      <Games>
+        {popular.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            image={game.background_image}
+            id={game.id}
+            key={game.id}
+          />
+        ))}
+      </Games>
+      <h2>New games</h2>
+      <Games>
+        {newGames.map((game) => (
           <Game
             name={game.name}
             released={game.released}

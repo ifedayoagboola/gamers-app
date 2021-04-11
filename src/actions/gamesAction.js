@@ -13,7 +13,7 @@ export const loadGames = () => async (dispatch) => {
     payload: {
       popular: popularData.data.results,
       upcoming: upcomingData.data.results,
-      newGaames: newGamesData.data.results,
+      newGames: newGamesData.data.results,
     },
   });
 };
