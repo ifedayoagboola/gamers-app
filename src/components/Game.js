@@ -15,7 +15,7 @@ const Game = ({ name, released, image, id }) => {
     <StyledGame onClick={loadDetailHandler}>
       <h3>{name}</h3>
       <p>{released}</p>
-      <img src={image} alt={image} />
+      <img src={image} alt={name} />
     </StyledGame>
   );
 };
